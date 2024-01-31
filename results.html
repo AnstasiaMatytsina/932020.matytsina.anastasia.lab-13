@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/styles.css">
+    <script src="../../static/script.js"></script>
+    <title>Hello Quiz - Backend3</title>
+    
+</head>
+<body>
+    <header>
+        <h3 class="h1-header">Backend3</h3>
+        <a class="button-header" href="/">Home</a>
+        <a class="button-header" href="/Mockups">Mockups</a>
+    </header>
+    <div class="content">
+        <div class="title">Quiz results</div>
+        <div style="font-size: 18px;">Right answers
+             <span class="right-answers">{{right_answers[0]}}</span> 
+             out 
+             <span class="all-answers">{{all_answers[0]}}</span>
+             <ol class="answers">
+                {%for m in answers -%}
+                <li>{{m.example}} = {{m.answer}}</li>
+                {% endfor -%}
+             </ol>
+        </div>
+        
+    </div>
+    
+    <footer>© 2023 - Backend3 MatytsinaAnastasia</footer>
+</body>
+</html>
